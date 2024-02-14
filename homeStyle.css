@@ -1,0 +1,41 @@
+body {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: large;
+  background-color: bisque;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+}
+
+#main-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 100px;
+}
+
+#home-image {
+  margin: auto;
+  border-radius: 15px;
+  width: 60%;
+}
+
+#game-resume {
+  width: 100%;
+  text-align: center;
+}
+
+#play {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: bold;
+  font-size: large;
+  width: 50%;
+  height: 40px;
+  margin-top: 3%;
+  border-radius: 15px;
+  background-color: tomato;
+  border-color: brown;
+  border-width: 4px;
+  color: white;
+}
