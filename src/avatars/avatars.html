@@ -4,6 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Selección de Avatares</title>
+    <link href="./avatars.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9d1e13086e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./avatars-script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <h1>Selección de Avatares</h1>
+    <section id="selector-container">
+      <div>
+        <h2>Jugador 1</h2>
+        <article id="player-one">
+          <button id="player-one-previous">
+            <i class="fa-solid fa-arrow-left" style="color: #74c0fc"></i>
+          </button>
+          <img
+            id="player-one-avatar"
+            src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png"
+            alt="avatar"
+          />
+          <button id="player-one-next">
+            <i class="fa-solid fa-arrow-right" style="color: #74c0fc"></i>
+          </button>
+        </article>
+        <input id="player-one-name" type="text" placeholder="name" />
+      </div>
+      <div>
+        <h2>Jugador 2</h2>
+        <article id="player-two">
+          <button id="player-two-previous">
+            <i class="fa-solid fa-arrow-left" style="color: #74c0fc"></i>
+          </button>
+          <img
+            id="player-two-avatar"
+            src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png"
+            alt="avatar"
+          />
+          <button id="player-two-next">
+            <i class="fa-solid fa-arrow-right" style="color: #74c0fc"></i>
+          </button>
+        </article>
+        <input id="player-two-name" type="text" placeholder="name" />
+      </div>
+    </section>
+    <button id="start-button">Empezar</button>
+  </body>
 </html>
