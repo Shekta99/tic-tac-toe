@@ -3,7 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./game.css" rel="stylesheet" type="text/css" />
     <title>Triqui</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./game-script.js"></script>
   </head>
-  <body></body>
+  <body onload="loadData()">
+    <h2 class="game-title">Triqui</h2>
+    <section class="section-container">
+      <article class="player-article" id="player-one-section">
+        <img class="player-avatar" alt="avatar" id="player-one-avatar" />
+        <p class="player-name" id="player-one-name"></p>
+      </article>
+      <article class="board-article">
+        <button class="game-field" onclick="play(this,0,0)"></button
+        ><button class="game-field" onclick="play(this,0,1)"></button
+        ><button class="game-field" onclick="play(this,0,2)"></button
+        ><button class="game-field" onclick="play(this,1,0)"></button
+        ><button class="game-field" onclick="play(this,1,1)"></button
+        ><button class="game-field" onclick="play(this,1,2)"></button
+        ><button class="game-field" onclick="play(this,2,0)"></button
+        ><button class="game-field" onclick="play(this,2,1)"></button
+        ><button class="game-field" onclick="play(this,2,2)"></button>
+      </article>
+      <article class="player-article" id="player-two-section">
+        <img class="player-avatar" alt="avatar" id="player-two-avatar" />
+        <p class="player-name" id="player-two-name"></p>
+      </article>
+    </section>
+  </body>
 </html>

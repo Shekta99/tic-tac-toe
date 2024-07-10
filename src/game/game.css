@@ -1,0 +1,50 @@
+body {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: large;
+  background-color: bisque;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  text-align: center;
+}
+
+.game-title {
+  text-align: center;
+}
+.section-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.player-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+  border-radius: 15px;
+}
+.player-avatar {
+  margin: auto;
+}
+.player-name {
+  text-align: center;
+}
+.board-article {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.game-field {
+  min-width: 5rem;
+  min-height: 5rem;
+  padding: 5%;
+  font-size: xx-large;
+  border: 1px solid grey;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), inset 0 0 3px 0 #cecfd1;
+}

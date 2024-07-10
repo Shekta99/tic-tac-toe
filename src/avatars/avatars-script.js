@@ -77,19 +77,42 @@ function previousAvatar(player) {
 }
 
 function start() {
-  const namePlayerOne = document.getElementById("player-one-name").value;
+  const inputPlayerOne = document.getElementById("player-one-name");
+  const namePlayerOne = inputPlayerOne.value;
   const avatarPlayerOne = playerOneAvatar.getAttribute("src");
   const playerOne = {
     name: namePlayerOne,
     avatar: avatarPlayerOne,
   };
-  const namePlayerTwo = document.getElementById("player-two-name").value;
+  const inputPlayerTwo = document.getElementById("player-two-name");
+  const namePlayerTwo = inputPlayerTwo.value;
   const avatarPlayerTwo = playerTwoAvatar.getAttribute("src");
   const playerTwo = {
     name: namePlayerTwo,
     avatar: avatarPlayerTwo,
   };
 
-  window.localStorage.setItem("playerOne", JSON.stringify(playerOne));
-  window.localStorage.setItem("playerTwo", JSON.stringify(playerTwo));
+  if (!namePlayerOne) {
+    const errorMessagePlayerOne = document.getElementById(
+      "player-one-error-message"
+    );
+    errorMessagePlayerOne.setAttribute("style", "display:block");
+    inputPlayerOne.addEventListener("keypress", () => {
+      errorMessagePlayerOne.setAttribute("style", "display:none");
+    });
+  }
+  if (!namePlayerTwo) {
+    const errorMessagePlayerTwo = document.getElementById(
+      "player-two-error-message"
+    );
+    errorMessagePlayerTwo.setAttribute("style", "display:block");
+    inputPlayerTwo.addEventListener("keypress", () => {
+      errorMessagePlayerTwo.setAttribute("style", "display:none");
+    });
+  }
+  if (namePlayerOne && namePlayerTwo) {
+    window.localStorage.setItem("playerOne", JSON.stringify(playerOne));
+    window.localStorage.setItem("playerTwo", JSON.stringify(playerTwo));
+    window.location.assign("http://127.0.0.1:5500/src/game/game.html");
+  }
 }
